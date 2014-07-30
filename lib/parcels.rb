@@ -16,12 +16,12 @@ class Parcel
     if 0 < @weight && @weight < 1.0
         price_per_pound = 5.00
     elsif 1.0 < @weight && @weight < 3.0
-       price_per_pound=3.00
+       price_per_pound = 3.00
     elsif 3.0 < @weight && @weight < 10.0
        price_per_pound = 2.00
     else
-      puts "FREE SHIPPING"
-      end
+      price_per_pound = 0.00
+    end
 
     @weight * price_per_pound
   end
